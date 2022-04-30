@@ -11,14 +11,18 @@ export default function Header(props) {
 
 const styles = StyleSheet.create({
   container: {
-    height: 50,
+    height: 60,
     width: "100%",
-    backgroundColor: "white",
+    backgroundColor: "lightblue",
     justifyContent: "center",
     alignItems: "center",
+    position: "absolute",
+    top: 0,
+    left: 0,
   },
   title: {
     fontSize: 30,
-    color: "blue",
+    color: "black",
+    fontWeight: 700,
   },
 })

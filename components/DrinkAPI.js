@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { View, Text, Image } from "react-native"
+import { ScrollView, Text, Image, StyleSheet } from "react-native"
 import Styled from "styled-components/native"
 import Loader from "./Loader"
 
@@ -21,27 +21,39 @@ const DrinkList = () => {
   }, [])
 
   const DrinkList = Styled.TouchableOpacity`
-    font-weight: 700;
-    width: 50%;
+    font-weight: 700,
+    width: 50%,
   `
+  const styles = StyleSheet.create({
+    text: {
+      fontSize: 15,
+      color: "black",
+      fontWeight: 500,
+    },
+  })
 
   return (
     <>
       {loading && Loader}
       {!loading && (
-        <View>
+        <ScrollView
+          style={{
+            color: "darkblue",
+            fontSize: 25,
+          }}
+        >
           {drinks.map((drink) => (
             <>
-              <Image>{drink.strThumb}</Image>
-              <Text>{drink.strDrink}</Text>
-              <Text>{drink.strInstructions}</Text>
+              {/* key={index} */}
+              <Text style={styles.text}>{drink.strDrink}</Text>
+              <Image
+                source={drink.strThumb}
+                style={{ width: 75, height: 75 }}
+                alt={DrinkList}
+              />
             </>
           ))}
-
-          <DrinkList onPress={generateDrinks}>
-            <Text>Search</Text>
-          </DrinkList>
-        </View>
+        </ScrollView>
       )}
     </>
   )

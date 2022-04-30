@@ -11,14 +11,15 @@ export default function Footer(props) {
 
 const styles = StyleSheet.create({
   container: {
-    height: 50,
+    height: 30,
     width: "100%",
-    backgroundColor: "white",
+    backgroundColor: "lightblue",
     justifyContent: "center",
     alignItems: "center",
   },
   title: {
+    fontWeight: 700,
     fontSize: 15,
-    color: "blue",
+    color: "black",
   },
 })

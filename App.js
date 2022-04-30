@@ -4,26 +4,35 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import DrinkList from "./components/DrinkAPI"
 import InputField from "./components/Inputfield"
+import { ScrollView } from "react-native"
 
 const Container = styled.View`
   flex: 1;
-  background-color: papayawhip;
+  background-color: lightcyan;
   justify-content: center;
   align-items: center;
 `
 
-const Title = styled.Text`
-  font-size: 24px;
-  color: palevioletred;
+const Text = styled.Text`
+  font-size: 15px;
+  color: lightslategrey;
+  width: 350;
+  padding: 15px;
 `
 
 const App = () => {
   return (
     <Container>
-      <Header title='Do you want a Drink?' />
-      <Title>Hello!! Are you there? Hello?</Title>
+      <Header title='One Coctail, please! 🍸' />
 
-      <DrinkList></DrinkList>
+      <Text>
+        Drinks are something most of us want to enjoy sometimes, not at least
+        during holidays like Christmas, New Year, Easter and Midsummer. Here can
+        you find a large variety of drinks, hope it taste lovely!
+      </Text>
+      <InputField />
+      <DrinkList />
+
       <Footer title='Made by Lovisa 2022' />
     </Container>
   )

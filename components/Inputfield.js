@@ -5,7 +5,7 @@ const InputField = () => {
 
   return (
     <form>
-      <label>What drink do you want?</label>
+      <label>🔎</label>
       <input
         type='text'
         value={inputValue}
