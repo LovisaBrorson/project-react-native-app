@@ -39,7 +39,6 @@ const DrinkList = () => {
         <ScrollView
           style={{
             color: "darkblue",
-            fontSize: 25,
           }}
         >
           {drinks.map((drink) => (
@@ -47,9 +46,8 @@ const DrinkList = () => {
               {/* key={index} */}
               <Text style={styles.text}>{drink.strDrink}</Text>
               <Image
-                source={drink.strThumb}
-                style={{ width: 75, height: 75 }}
-                alt={DrinkList}
+                source={{ uri: drink.strDrinkThumb }}
+                style={{ height: 75, width: 75 }}
               />
             </>
           ))}
