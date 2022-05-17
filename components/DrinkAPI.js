@@ -14,7 +14,6 @@ const DrinkList = () => {
       .then((data) => setDrinks(data.drinks))
       .finally(() => setLoading(false))
   }
-  console.log(drinks)
 
   useEffect(() => {
     generateDrinks()

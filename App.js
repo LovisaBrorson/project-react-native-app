@@ -14,10 +14,11 @@ const Container = styled.View`
 `
 
 const Text = styled.Text`
-  font-size: 15px;
+  font-size: 15;
   color: lightslategrey;
   width: 350;
-  padding: 15px;
+  padding-top: 70;
+  padding-bottom: 10;
 `
 
 const App = () => {
